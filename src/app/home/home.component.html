@@ -1,1 +1,78 @@
-<p>home works!</p>
+<div class="col-lg-12 menu-row">
+    <div class="row">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" overlapTrigger="true">
+            <div id="profile-image-holder">
+                <img src="https://www.pngkey.com/png/detail/988-9886269_blank-person-facebook-no-profile.png">
+            </div>
+            <div class="col-lg-12 user-info">
+                <span class="firstname-lastname">{{firstAndLastName}}</span>
+                <button mat-menu-item [matMenuTriggerFor]="userMenus">
+                    {{role}} <mat-icon>arrow_drop_down</mat-icon>
+                </button>
+            </div>
+            <button mat-menu-item>
+                <mat-icon>favorite</mat-icon>
+                <span>Favorites</span>
+            </button>
+            <button mat-menu-item (click)="navigateFromMenu('profile')">
+                <mat-icon>account_circle</mat-icon>
+                <span>Profile</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>event</mat-icon>
+                <span>Tasks</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>share</mat-icon>
+                <span>Social Networks</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>visibility</mat-icon>
+                <span>Watching</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>favorite</mat-icon>
+                <span>Chat & Friends</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>account_circle</mat-icon>
+                <span>Body 2</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>event</mat-icon>
+                <span>Timesheet</span>
+            </button>
+        </mat-menu>
+
+        <mat-menu #userMenus="matMenu">
+            <button mat-menu-item>
+                <span>Edit Profile</span>
+            </button>
+            <button mat-menu-item (click)="navigateFromMenu('change-password')">
+                <span>Change Password</span>
+            </button>
+            <button mat-menu-item (click)="navigateFromMenu('login-activity')">
+                <span>Log Time</span>
+            </button>
+            <button mat-menu-item (click)="logout()"> 
+                <span>Logout</span>
+            </button>
+        </mat-menu>
+
+        <label class="menu-name" (click)="navigateToHome()">HR Portal</label>
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+    
+    
+</div>
+<div class="col-lg-12 main-content no-padding">
+    <router-outlet></router-outlet>
+</div>
+<div class="col-lg-12 footer-row no-padding">
+    
+</div>

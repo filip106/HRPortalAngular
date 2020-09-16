@@ -12,6 +12,6 @@ export class LoginService {
     let body = {};
     body['username'] = username;
     body['password'] = password;
-    return this.httpClient.post('http://localhost:8080/login', body, {observe:'response'});
+    return this.httpClient.post('http://192.168.0.12:8080/login', body, {observe:'response'});
   }
 }

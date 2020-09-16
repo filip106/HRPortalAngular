@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
         .toPromise().then((response:any) => {
           if(response.status === 200) {
             localStorage.setItem("token",response.body.token);
-            this.router.navigate(['/home']);
+            this.router.navigate(['']);
           } else {
             window.alert('Unexpected behaviour');
           }

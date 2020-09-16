@@ -1,0 +1,61 @@
+h2 {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.image-name-holder {
+    
+    display: flex;
+    align-items: center;
+
+    img {
+        width: auto;
+        max-height: 130px !important;
+        border-radius: 50%;
+        margin-left: 15px;
+    }
+    
+    .fist-last-name-span {
+        font-size: 20px;
+        margin-left: 15px;
+    }
+}
+
+.main-topic-div,
+.login-location-div {
+    margin-top: 30px;
+    margin-left: 15px;
+    text-align: left;
+
+    .main-topic-name {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+}
+
+.login-location-div {
+    margin-bottom: 30px;
+}
+
+.div-location {
+    margin-bottom: 5px;
+}
+
+.mat-list-item {
+    margin-bottom: 20px;
+}
+
+.login-details {
+
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    .div-location,
+    .div-date {
+        text-align: left;
+    }
+}
+
+    

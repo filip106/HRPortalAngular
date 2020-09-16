@@ -1,0 +1,68 @@
+<div id="profile">
+    
+    <span class="fist-last-name-span">{{firstAndLastName}}</span>
+
+    <div class="background-image-div">
+        <img class="background-image" src={{backgroundPictureURI}}>
+    </div>
+
+    <div class="profile-image-div">
+        <img class="profile-image" src="{{profilePictureURI}}">
+    </div>
+
+    <div class="col-12 edit-profile-div">
+        <button id="edit-profile" mat-flat-button color="primary" (click)="navigateToEdit()">EDIT PROFILE</button>
+    </div>
+
+    <div class="col-12 user-info">
+        <div class="col-12">
+            <span class="fist-last-name-span">{{firstAndLastName}}</span>
+        </div>
+        <div class="col-12">
+            <span>{{role}}</span>
+        </div>
+    </div>
+
+    <div class="col-12 user-dates">
+        <div class="row">
+            <div class="col-6">
+                <mat-icon>cake</mat-icon> Born: {{birthDate | date:'dd LLL yyyy'}}
+            </div>
+            <div class="col-6">
+                <mat-icon>domain</mat-icon> Joined: {{dateJoinedCompany | date:'LLL yyyy'}}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 additional-info">
+        <div class="row">
+            <div class="col-4">
+                <div class="row">
+                    <p class="numbers-paragraph">222</p>
+                    <p>Tasks</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <p class="numbers-paragraph">222</p>
+                    <p>Colleagues</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <p class="numbers-paragraph">222</p> 
+                    <p>Projects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 tabs">
+        <mat-tab-group animationDuration="400ms" mat-stretch-tabs>
+            <mat-tab label="Tasks">Tasks</mat-tab>
+            <mat-tab label="Projects">Projects</mat-tab>
+            <mat-tab label="Colleagues">Colleagues</mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
+

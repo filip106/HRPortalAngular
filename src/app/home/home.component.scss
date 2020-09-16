@@ -1,0 +1,33 @@
+.menu-row {
+    background:purple;
+    color: white;
+
+    .menu-name {
+        margin: auto;
+    }
+}
+
+img {
+    height: 70%;
+    width: auto;
+    max-height: 161px !important;
+}
+
+.mat-menu-item-submenu-trigger::after {
+    display: none;
+}
+
+.user-info {
+
+    margin: 10px 0px;
+
+    .firstname-lastname {
+        padding-left: 16px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+.main-content {
+    margin-top: 10px;
+}

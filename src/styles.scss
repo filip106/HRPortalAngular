@@ -2,10 +2,20 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.container {
+.main-content {
     text-align: center;
 
     .width-100-percent {
         width: 100%;
     }
+}
+
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+button:focus,
+button:hover { 
+    outline: none !important;
 }

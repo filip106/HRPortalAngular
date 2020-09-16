@@ -8,12 +8,12 @@ import { HttpClient } from '@angular/common/http';
 export class AuthGuardService implements CanActivate{
 
   constructor(private httpClient: HttpClient, private router: Router) { }
-
-  async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+ 
+  async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean> {
     let validated;
     let token: string = localStorage.getItem('token');
     if(token) {
-      await this.httpClient.post('http://localhost:8080/validate',{token: token},{observe:'response'}).toPromise().then((response:any) => {
+      await this.httpClient.post('http://192.168.0.12:8080/validate',{token: token},{observe:'response'}).toPromise().then((response:any) => {
         if(response.status === 200 && response.body) {
           validated = true;
         } else {

@@ -1,0 +1,58 @@
+#edit-profile {
+    text-align: left;
+    .edit-profile-header {
+        margin-left: 30px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .image-user-name-div {
+        margin-top: 25px;
+        .row {
+            align-items: center;
+            .profile-image-div {
+                padding-left: 30px !important;
+                .profile-image {
+                    border-radius: 50%;
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+            .firstAndLastName {
+                font-size: 17px;
+            }
+
+            .change-profile-image {
+                font-size: 12px;
+                color: purple;
+            }
+        }
+    }
+
+    .inputs {
+        margin-top: 25px;
+
+        .some-info {
+            text-align: justify;
+        }
+
+        .div-email,
+        .div-phone-number,
+        .div-confirm-buttons {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        #confirm-mail,
+        #save-changes,
+        #cancel {
+            border-radius: 25px;
+        }
+
+        .div-cancel-button {
+            text-align: right;
+        }
+
+    }
+
+
+}
